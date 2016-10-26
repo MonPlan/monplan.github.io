@@ -1,114 +1,134 @@
+
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Monash Unit Planner by MonashUnitPlanner</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Monash Unit Planner</h1>
-      <h2 class="project-tagline">A Monash University Degree (Course) Planner built by Monash Students, for Monash Students</h2>
-    </section>
+<html>
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-    <section class="main-content">
-      <h1>
-<a id="monash-course-planner" class="anchor" href="#monash-course-planner" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Monash Course Planner</h1>
+  <!-- Site Properties -->
+  <title>Homepage - Semantic</title>
+  <link rel="stylesheet" type="text/css" href="./semantic/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="./semantic/custom.css">
 
-<p>Plan out your degree with <strong>Monash Course Planner</strong>. Monash University Course Planner is designed to help you to choose your units for the coming semesters. And takes account into prerequisites as well as prohibitions </p>
+  <script src="./js/jquery-3.1.1.min.js"></script>
+  <script src="./js/semantic.min.js"></script>
+  <script>
+  $(document)
+    .ready(function() {
 
-<h1>
-<a id="beta-access" class="anchor" href="#beta-access" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Beta Access</h1>
+      // fix menu when passed
+      $('.masthead')
+        .visibility({
+          once: false,
+          onBottomPassed: function() {
+            $('.fixed.menu').transition('fade in');
+          },
+          onBottomPassedReverse: function() {
+            $('.fixed.menu').transition('fade out');
+          }
+        })
+      ;
 
-<p>To access the beta visit: <a href="https://monashunitplanner.github.io/monPlan/">https://monashunitplanner.github.io/monPlan/</a></p>
+      // create sidebar and attach to menu open
+      $('.ui.sidebar')
+        .sidebar('attach events', '.toc.item')
+      ;
 
-<h1>
-<a id="site-design" class="anchor" href="#site-design" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Site Design</h1>
+    })
+  ;
+  </script>
+</head>
+<body>
 
-<p><img src="http://i.imgur.com/QmGI4WC.png" alt="Screenshot"></p>
+<!-- Following Menu -->
+<div class="ui large top fixed hidden menu">
+  <div class="ui container">
+    <a class="active item">Home</a>
+    <a class="item">Work</a>
+    <a class="item">Company</a>
+    <a class="item">Careers</a>
+    <div class="right menu">
+      <div class="item">
+        <a href="https://github.com/MonashUnitPlanner"><i class="github icon"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
 
-<h1>
-<a id="current-features" class="anchor" href="#current-features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Current Features</h1>
 
-<ul>
-<li>Modern site built with electron </li>
-<li>Pure.css </li>
-</ul>
+<!-- Page Contents -->
+<div class="pusher">
+  <div class="ui inverted vertical masthead center aligned segment">
 
-<h1>
-<a id="planned-features" class="anchor" href="#planned-features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Planned Features</h1>
+    <div class="ui container">
+      <div class="ui large secondary inverted pointing menu">
+        <a class="toc item">
+          <i class="sidebar icon"></i>
+        </a>
+        <a class="active item">Home</a>
+        <div class="right menu">
+          <div class="item">
+            <a href="https://github.com/MonashUnitPlanner"><i class="github icon"></i> View on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<ul>
-<li>Takes account of prerequisites and prohibitions</li>
-<li>Plan for the future</li>
-<li>Add deferring semester blocks</li>
-<li>sql database updates from website crawling using python3 </li>
-</ul>
+    <div class="ui text container">
+      <h1 class="ui inverted header">
+        monPlan - Monash Unit Planner
+      </h1>
+      <h2>Plan out your course the way you want to. Designed for Monash Students, by Monash Students</h2>
+      <a class="ui huge primary button" href="https://monashunitplanner.github.io/monPlan">Get Started <i class="right arrow icon"></i></a>
+    </div>
 
-<h1>
-<a id="dependancies-list" class="anchor" href="#dependancies-list" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dependancies List</h1>
+  </div>
 
-<ul>
-<li>npm (node.js)</li>
-<li>electron</li>
-<li><p>Pure.css</p></li>
-<li><p>(sql.js)</p></li>
-<li>(python3)</li>
-</ul>
+  <div class="ui vertical stripe segment">
+    <div class="ui middle aligned stackable grid container">
+      <div class="row">
+        <div class="seven wide column">
+          <h3 class="ui header">Smart. Simpler. Better.</h3>
+          <p>We know that navigating the Monash Handbook is hard, so When picking units using this tool, it will show you when you can do it and the preqs required</p>
+        </div>
+        <div class="seven wide right floated column">
+          <h3 class="ui header">We love code, and you'll love it.</h3>
+          <p>Yes that's right, you didn't misread this, our team loves to code and do what is best.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<p><em>Database is currently stored as a sqlite db, this may be pushed onto a SQL Server in the near future</em></p>
+  <div class="ui vertical stripe segment">
+    <div class="ui text container">
+      <h3 class="ui header">Powered by beautiful frameworks</h3>
+      <p>We love frameworks, it helps us make beautiful things easier, such as this beautiful site is powered by the guys at Semantic-UI.</p>
+      <img src="./images/monPlan.PNG" width="100%" height="100%"/>
+    </div>
+  </div>
 
-<h1>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h1>
 
-<h2>
-<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+  <div class="ui inverted vertical footer segment">
+    <div class="ui container">
+      <div class="ui stackable inverted divided equal height stackable grid">
+        <div class="three wide column">
+          <h4 class="ui inverted header">About</h4>
+          <div class="ui inverted link list">
+            The lead developers of this project are @lorderikir and @Joshua-Xavier
+          </div>
+        </div>
+        <div class="ten wide column">
+          <h4 class="ui inverted header">monPlan</h4>
+          <p>Made with love!</p>
+          <p>Copyright &copy; 2016 monPlan </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p>This uses Electron, to install npm package type</p>
+</body>
 
-<pre><code>sudo npm install
-</code></pre>
-
-<h2>
-<a id="developement-and-testing" class="anchor" href="#developement-and-testing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Developement and Testing</h2>
-
-<p>To test simply run</p>
-
-<pre><code>npm start
-</code></pre>
-
-<p>This will run an electron instance</p>
-
-<h1>
-<a id="to-join" class="anchor" href="#to-join" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>To Join</h1>
-
-<p>You can join this project through many different ways</p>
-
-<ul>
-<li>make a fork and pull request changes</li>
-<li>Contact our administrators</li>
-</ul>
-
-<h1>
-<a id="contact" class="anchor" href="#contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contact</h1>
-
-<p>You can contact the following admins/devs </p>
-
-<p><a href="https://github.com/lorderikir" class="user-mention">@lorderikir</a></p>
-
-<p><a href="https://github.com/Joshua-Xavier" class="user-mention">@Joshua-Xavier</a></p>
-
-      <footer class="site-footer">
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-  
-  </body>
 </html>
