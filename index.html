@@ -47,9 +47,13 @@
 <body>
 
 <!-- Following Menu -->
-<div class="ui large top fixed hidden menu">
+<div class="ui large top fixed hidden menu" id="scrollingMenu">
   <div class="ui container">
-    <a class="active item">Home</a>
+    <a class="item" href="#intro">Home</a>
+    <a class="item" href="#new">What's New</a>
+    <a class="item" href="#features">Features</a>
+    <a class="item" href="#team">Our Team</a>
+    <a class="item" href="#about">About</a>
     <div class="right menu">
       <div class="item">
         <a href="https://github.com/MonashUnitPlanner"><i class="github icon"></i></a>
@@ -68,7 +72,11 @@
         <a class="toc item">
           <i class="sidebar icon"></i>
         </a>
-        <a class="active item">Home</a>
+          <a class="active item" href="#intro">Home</a>
+          <a class="item" href="#new">What's New</a>
+          <a class="item" href="#features">Features</a>
+          <a class="item" href="#team">Our Team</a>
+          <a class="item" href="#about">About</a>
         <div class="right menu">
           <div class="item">
             <a class="ui inverted button" href="https://github.com/MonashUnitPlanner" target="_blank"><i class="github icon"></i> View on GitHub</a>
@@ -80,7 +88,7 @@
       </div>
     </div>
 
-    <div class="ui text container">
+    <div class="ui text container" id="intro">
       <h1 class="ui inverted header">
         monPlan
       </h1>
@@ -92,17 +100,17 @@
 
 
 
-  <div class="ui vertical stripe segment" id="news">
+  <div class="ui vertical stripe inverted segment" id="new">
     <div class="ui middle aligned stackable grid container">
-      <h3 class="ui center aligned icon header"><i class="comments outline icon"></i>Whats New</h3>
+      <h3 class="ui center aligned inverted icon header"><i class="comments outline icon"></i>Whats New</h3>
         <div class="content">
-          <h4 class="ui header"><i class="code icon"></i>Whats New in monPlan (Patch released on 27th November 2016)</h4>
+          <h4 class="ui inverted header"><i class="code icon"></i>Whats New in monPlan (Patch released on 27th November 2016)</h4>
           <ul class="list">
             <li class="item">Reorganisation of JSON data files</li>
             <li class="item">Recoded table elements (some bug are present)</li>
             <li class="item">Updated code for searching Majors/Minors/Specialisations as well as actual Degrees (currently only undergrad degrees)</li>
           </ul>
-          <h4 class="ui header"><i class="newspaper icon"></i>News/Community Announcements</h4>
+          <h4 class="ui inverted header"><i class="newspaper icon"></i>News/Community Announcements</h4>
           <ul class="list">
             <li class="item">We are now officially working with <i>eSolutions</i> at Monash University</li>
             <li class="item">We will be holding <strong>Community Development Workshops</strong> throughout December 2016 and February 2017. Please register <a href="https://goo.gl/Vpgmld" target="_blank">HERE</a></li>
@@ -140,9 +148,9 @@
     </div>
   </div>
 
-  <div class="ui vertical stripe segment">
+  <div id="team" class="ui vertical stripe segment">
     <div class="ui middle aligned stackable grid container">
-      <h3>Our Team</h3>
+      <h3 class="ui center aligned inverted icon header"><i class="users icon"></i>Our Team</h3>
       <div class="ui cards">
         <div class="ui card">
           <div class="image">
