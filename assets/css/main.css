@@ -3707,3 +3707,7 @@
 		}
 
 	}
+
+.contactIcon:hover::before {
+	background-color: grey;
+}
