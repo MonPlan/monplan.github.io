@@ -33,7 +33,10 @@
 				        window.location.hash = hash;
 				      });
 				    } // End if
-				})
+				});
+
+				var images = ['Monash.jpg', 'Monash2.jpg', 'Monash3.jpg'];
+				$('body').css({'linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), background-image': 'url(images/' + images[Math.floor(Math.random() * images.length)] + ')'});
 			})
 		</script>
 
@@ -74,7 +77,7 @@
 							<div class="logo"><span class="icon fa-calendar"></span></div>
 							<h2>monPlan</h2>
 							<p>A Monash Course Planner designed for Students by Students</p>
-							<p><i>We've just released v0.4.0!!! Check it out today!</i></p>
+							<p><i>v0.5.0 is Coming Soon! Stayed tuned for more announcements!!!</i></p>
 							<p><a href="https://monplan.tech" class="button special icon fa-play">Start Planning My Course</a></p>
 						</div>
 					</section>
