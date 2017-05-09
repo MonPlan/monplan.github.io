@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="assets/css/custom.css" />
 		<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
 		<script src="assets/js/jquery.min.js"></script>
+		<script src="countUp.min.js"></script>
 		<script>
 			$(document).ready(function(){
 				$("a").on('click',function(){
@@ -38,6 +39,19 @@
 
 				var images = ['Monash.jpg', 'Monash2.jpg', 'Monash3.jpg'];
 				$('body').css({'background-image': 'linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url(images/' + images[Math.floor(Math.random() * images.length)] + ')'});
+
+                var options = {
+                    useEasing : true,
+                    useGrouping : true,
+                    separator : ',',
+                    decimal : '.',
+                };
+                var users = new CountUp("users", 0, 2389, 0, 2.5, options);
+                var pageviews = new CountUp("pageviews", 0, 14521, 0, 2.5, options);
+                var sessions = new CountUp("sessions", 0, 3481, 0, 2.5, options);
+                users.start();
+                pageviews.start();
+                sessions.start();
 			})
 		</script>
 
@@ -90,6 +104,23 @@
 							<section id="intro" class="wrapper spotlight style2">
 								<div class="inner">
 									<div class="content">
+										<div class="row uniform" style="text-align: center; align: center">
+											<div class="4u">
+												<span class="icon fa-users fa-4"/><br/>
+												<h1>Users: <h1 id="users">1,234,567</h1>
+												</h1>
+											</div>
+											<div class="4u">
+												<span class="icon fa-eye fa-4"/><br/>
+												<h1>Pageviews: <h1 id="pageviews">1,234,567</h1>
+											</div>
+											<div class="4u">
+												<span class="icon fa-code-fork fa-4"/><br/>
+												<h1>Sessions: <h1 id="sessions">1,234,567</h1>
+											</div>
+											<i style="font-size: 1em">As of 9th May 2017, Since Launch in December 2016</i>
+										</div>
+										<hr />
 										<h2 class="major">Our Story</h2>
 										<p>
 											In the beginning, we like most students found planning our course extremely hard,
