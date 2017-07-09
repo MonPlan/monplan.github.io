@@ -39,19 +39,6 @@
 
 				var images = ['Monash.jpg', 'Monash2.jpg', 'Monash3.jpg'];
 				$('body').css({'background-image': 'linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url(images/' + images[Math.floor(Math.random() * images.length)] + ')'});
-
-                var options = {
-                    useEasing : true,
-                    useGrouping : true,
-                    separator : ',',
-                    decimal : '.',
-                };
-                var users = new CountUp("users", 0, 2389, 0, 2.5, options);
-                var pageviews = new CountUp("pageviews", 0, 14521, 0, 2.5, options);
-                var sessions = new CountUp("sessions", 0, 3481, 0, 2.5, options);
-                users.start();
-                pageviews.start();
-                sessions.start();
 			})
 		</script>
 
@@ -67,18 +54,19 @@
 					<header id="header" class="alt">
 						<h1><a href="index.html">monPlan</a></h1>
 						<nav>
-							<a href="#menu">Site Navigation</a>
+							<a href="#menu"></a>
 						</nav>
 					</header>
 
 				<!-- Menu -->
 					<nav id="menu">
 						<div class="inner">
-							<h2>Site Navigation</h2>
+							<h2>Browse our Site</h2>
 							<ul class="links">
 								<li><a href="index.html">Home</a></li>
 								<li><a id="introClick" href="#intro">Introduction</a></li>
 								<li><a href="#vision">Our Vision</a></li>
+								<li><a href="#team">Our Team</a></li>
 								<li><a href="#features">Features</a></li>
 								<li><a href="#footer">Get in Touch</a></li>
 							</ul>
@@ -90,8 +78,8 @@
 					<section id="banner">
 						<div class="inner">
 							<img src="./images/logo_white.svg" width="40%" style="padding: 1em; padding-left: 0"/>
-							<p>A Monash Course Planner designed for Students by Students</p>
-							<p>Plan your <b>Monash Journey</b> with us today.</p>
+							<p>The Monash Course Planner built for Students, by Students</p>
+							<p>Your <b>Monash Journey</b> begins with us today.</p>
 							<p><a href="http://monplan.apps.monash.edu" class="button special icon fa-play">Plan my Monash Journey</a></p>
 							<p style="font-size:0.75em">Got a Problem, Feedback, or some New Error? Submit it <a href="https://goo.gl/TEPY9n">here</a></p>
 						</div>
@@ -104,23 +92,6 @@
 							<section id="intro" class="wrapper spotlight style2">
 								<div class="inner">
 									<div class="content">
-										<div class="row uniform" style="text-align: center; align: center">
-											<div class="4u">
-												<span class="icon fa-users fa-4"/><br/>
-												<h1>Users: <h1 id="users">1,234,567</h1>
-												</h1>
-											</div>
-											<div class="4u">
-												<span class="icon fa-eye fa-4"/><br/>
-												<h1>Pageviews: <h1 id="pageviews">1,234,567</h1>
-											</div>
-											<div class="4u">
-												<span class="icon fa-code-fork fa-4"/><br/>
-												<h1>Sessions: <h1 id="sessions">1,234,567</h1>
-											</div>
-											<i style="font-size: 1em">As of 9th May 2017, Since Launch in December 2016</i>
-										</div>
-										<hr />
 										<h2 class="major">Our Story</h2>
 										<p>
 											In the beginning, we like most students found planning our course extremely hard,
@@ -159,90 +130,71 @@
 													based off their future career.
 												</p>
 										</blockquote>
-										<h2 class="major">Our Team</h2>
-										<div class="box alt">
-											<div class="row uniform">
-												<div class="4u">
-
+										<h2 id="team" class="major">Our Team</h2>
+										<div class="box alt" >
+											<div class="row uniform" style="font-size:0.65em">
+												<div class="2u">
 													<article>
 													<a class="image fit"><img src="https://avatars1.githubusercontent.com/u/5687681?v=3&s=460" alt="" /></a>
 													<h3 class="major">Eric Jiang <br/> (lorderikir)</h3>
-													<a href="https://github.com/lorderikir"><span class="icon fa-github"/> GitHub Profile</span></a> <br/>
-													<a href="https://au.linkedin.com/in/ericjiang97"><span class="icon fa-linkedin" /> LinkedIn</span></a> <br/>
+													<a href="https://github.com/lorderikir"><span class="icon fa-github"/> GitHub</a> <br/>
+													<a href="https://au.linkedin.com/in/ericjiang97"><span class="icon fa-linkedin" /> LinkedIn</a> <br/>
 													<span class="icon fa-map-marker"> Melbourne, Australia <br />
-													<span class="icon fa-university"> BInfoTech, Monash University <br />
-													<span class="icon fa-user"> Junior Software Developer, eSolutions, Monash University</span>
+													<span class="icon fa-university"> BInfoTech, Monash Uni <br />
+													<span class="icon fa-user"> Project Lead/Systems Administrator</span>
 													</article>
 												</div>
-												<div class="4u">
+												<div class="2u">
 													<article>
 													<a class="image fit"><img src="https://avatars1.githubusercontent.com/u/5346136?v=3&s=460" alt="" /></a>
 													<h3 class="major">Saurabh Joshi <br/> (jos0003)</h3>
 													</article>
-													<a href="https://github.com/jos0003"><span class="icon fa-github"/> GitHub Profile</span></a> <br/>
-													<a href="https://au.linkedin.com/in/saurabh-joshi-69ab34110"><span class="icon fa-linkedin" /> LinkedIn</span></a> <br/>
+													<a href="https://github.com/jos0003"><span class="icon fa-github"/> GitHub</a> <br/>
+													<a href="https://au.linkedin.com/in/saurabh-joshi-69ab34110"><span class="icon fa-linkedin" /> LinkedIn</a> <br/>
 													<span class="icon fa-map-marker"> Melbourne, Australia <br />
-													<span class="icon fa-university"> BCompSci, Monash University <br/>
-													<span class="icon fa-user"> Junior Software Developer, eSolutions, Monash University</span>
+													<span class="icon fa-university"> BCompSci, Monash Uni <br/>
+													<span class="icon fa-user"> Lead Frontend Developer</span>
 
 												</div>
-												<div class="4u">
-													<article>
-													<a class="image fit"><img src="https://avatars1.githubusercontent.com/u/12482943?v=3&s=460" alt="" /></a>
-													<h3 class="major">Josh Nelsson-Smith <br/>  (Joshua-Xavier)</h3>
-													</article>
-													<a href="https://github.com/Joshua-Xavier"><span class="icon fa-github"/> GitHub Profile</span></a> <br/>
-													<a href="https://au.linkedin.com/in/joshua-nelsson-smith-218736106"><span class="icon fa-linkedin" /> LinkedIn</span></a> <br/>
-													<span class="icon fa-map-marker"> Melbourne, Australia <br />
-													<span class="icon fa-university"> BSE, Monash University <br />
-													<span class="icon fa-user"> Junior Software Developer, eSolutions, Monash University</span>
-												</div>
-
-											</div>
-											<div class="row uniform">
-												<div class="4u">
+												<div class="2u">
 													<article>
 													<a class="image fit"><img src="https://avatars1.githubusercontent.com/u/25516325?v=3&s=460" alt="" /></a>
 													<h3 class="major">Charlie Campton-Strachan</h3>
 													</article>
-													<a href="https://github.com/charmonash"><span class="icon fa-github"/> GitHub Profile</span></a> <br/>
+													<a href="https://github.com/charmonash"><span class="icon fa-github"/> GitHub</span></a> <br/>
+													<a href="https://www.linkedin.com/in/charles-campton-bb3751100/"><span class="icon fa-linkedin" /> LinkedIn</span></a> <br/>
 													<span class="icon fa-map-marker"> Melbourne, Australia <br />
 													<span class="icon fa-university"> BITS, Monash University <br />
-													<span class="icon fa-user"> IBL Student, eSolutions, Monash University</span>
+													<span class="icon fa-user"> Product Lead</span>
 												</div>
-												<div class="4u">
-													<article>
-													<a class="image fit"><img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAj1AAAAJDVhMjhkODkyLTU3YTMtNDI1Ny05ZjljLWU2M2JjYjdkZmVkMg.jpg" alt="" /></a>
-													<h3 class="major">Simon Short<br/> </h3>
-													</article>
-													<a href="https://www.linkedin.com/in/simon-short-b53b178"><span class="icon fa-linkedin" /> LinkedIn</span></a> <br/>
-													<span class="icon fa-map-marker"> Melbourne, Australia <br />
-													<span class="icon fa-user"> UX Designer, eSolutions, Monash University</span>
-												</div>
-												<div class="4u">
+												<div class="2u">
 													<article>
 													<a class="image fit"><img src="https://avatars1.githubusercontent.com/u/10809884?v=3&s=460" alt="" /></a>
-													<h3 class="major">Robert Koch<br/> </h3>
+													<h3 class="major">Robert Koch<br/> (kochie)</h3>
 													</article>
-													<a href="https://github.com/kochie"><span class="icon fa-github"/> GitHub Profile</span></a> <br/>
+													<a href="https://github.com/kochie"><span class="icon fa-github"/> GitHub</span></a> <br/>
 													<a href="https://au.linkedin.com/in/rkkochie"><span class="icon fa-linkedin" /> LinkedIn</span></a> <br/>
 													<span class="icon fa-map-marker"> Melbourne, Australia <br />
-													<span class="icon fa-university"> Monash University <br />
-													<span class="icon fa-user"> Junior Software Developer, eSolutions, Monash University</span>
+													<span class="icon fa-university"> BElecEng/BCompSci <br />
+													<span class="icon fa-user"> DevOps Engineer/Backend Developer</span>
 												</div>
-											</div>
-											<div class="row uniform">
-												<div class="4u">
+												<div class="2u">
 													<article>
 														<a class="image fit"><img src="https://avatars3.githubusercontent.com/u/15629117?v=3&s=460" alt="" /></a>
-														<h3 class="major">David Copley</h3>
+														<h3 class="major">David Copley<br/> (davidcopley) </h3>
 													</article>
 													<a href="https://github.com/davidcopley"><span class="icon fa-github"/> GitHub Profile</span></a> <br/>
+													<a ><span class="icon fa-linkedin" /> LinkedIn (N/A)</span></a> <br/>
 													<span class="icon fa-map-marker"> Melbourne, Australia <br />
-													<span class="icon fa-university"> Monash University <br />
-													<span class="icon fa-user"> Junior Software Developer, eSolutions, Monash University</span>
+													<span class="icon fa-university"> BSE <br />
+													<span class="icon fa-user"> UX Designer/Frontend Developer</span>
 												</div>
-												<div class="4u">
+
+											</div>
+											<br/>
+											<h3 class="major">Our Awesome Ex-Devs</h2>
+											<div class="row uniform" style="font-size:0.65em">
+												<div class="2u">
 													<article>
 														<a class="image fit"><img src="https://avatars2.githubusercontent.com/u/7542378?v=3&s=460" alt="" /></a>
 														<h3 class="major">Harry Ferrier<br/> </h3>
@@ -250,6 +202,25 @@
 													<a href="https://github.com/hoferrier"><span class="icon fa-github"/> GitHub Profile</span></a> <br/>
 													<span class="icon fa-map-marker"> Melbourne, Australia <br />
 													<span class="icon fa-user"> Junior Software Developer, eSolutions, Monash University</span>
+												</div>
+												<div class="2u">
+													<article>
+													<a class="image fit"><img src="https://avatars1.githubusercontent.com/u/12482943?v=3&s=460" alt="" /></a>
+													<h3 class="major">Josh Nelsson-Smith <br/>  (Joshua-Xavier)</h3>
+													</article>
+													<a href="https://github.com/Joshua-Xavier"><span class="icon fa-github"/> GitHub</span></a> <br/>
+													<a href="https://au.linkedin.com/in/joshua-nelsson-smith-218736106"><span class="icon fa-linkedin" /> LinkedIn</span></a> <br/>
+													<span class="icon fa-map-marker"> Melbourne, Australia <br />
+													<span class="icon fa-university"> BSE, Monash University <br />
+													<span class="icon fa-user"> Co-Founder</span>
+												</div>
+												<div class="2u">
+												</div>
+												<div class="2u">
+												</div>
+												<div class="2u">
+												</div>
+												<div class="2u">
 												</div>
 											</div>
 
@@ -296,20 +267,20 @@
 									</p>
 									<section class="features">
 										<article>
-											<a class="image"><img src="images/features/unitinfo.png" alt="" /></a>
+											<a class="image"><img src="images/features/summary.png" alt="" /></a>
 											<h3 class="major">View Unit Info</h3>
-											<p>View information about your unit, including the description, when and where the unit will be held, Prereqs,
+											<p>
+												View information about your unit, including the description, when and where the unit will be held, Prereqs,
 												Coreqs, how many credit points and how much the unit costs (based on 2017 costs and for Domestic CSP students).
 												As well as SETU ratings for that unit.
 											</p>
 										</article>
 										<article>
 											<a class="image fit"><img src="images/features/validation.png" alt="" /></a>
-											<h3 class="major">Validation (Beta)</h3>
+											<h3 class="major">Validation</h3>
 											<p>
-												Validation is now in beta! This was updated in Version 0.4.0, we are pleased to announce that basic validation
-												such as Prereqs/coreqs/prohibitions and Teaching Period for units have been updated. Hover over the warning sign
-												to read the warning, otherwise read the status bar.
+												We have improved our validation, bringing smarter and clearer indication of where you may face problems from Course Advisors.
+
 											</p>
 										</article>
 										<article>
@@ -320,7 +291,9 @@
 										<article>
 											<a class="image"><img src="images/features/custom.png" alt="" /></a>
 											<h3 class="major">Custom Units</h3>
-											<p>In place of depreicated units, you can add 'Custom Units' to replace them. I mean what could go wrong?</p>
+											<p>We don't necessary have all the information about units that were done perviously, but we place faith in you in making your own unit.
+												We believe that nothing will go wrong......
+											</p>
 										</article>
 										<article>
 											<a class="image"><img src="images/features/loadcourse.gif" alt="" /></a>
@@ -328,16 +301,12 @@
 											<p>You can start off with by loading a course or with the old way, picking your start and end years</p>
 										</article>
 										<article>
-											<a class="image"><img src="images/features/summary.PNG" alt="" /></a>
+											<a class="image"><img src="images/features/courseinfo.PNG" alt="" /></a>
 											<h3 class="major">View Course Information</h3>
 											<p>You can view information about your course such as Course Duration, required Credit points, etc.</p>
 										</article>
 									</section>
-									<h2 class="major">Partnered With</h2>
-									<a class="image" href="https://3wks.com.au"><img src="images/3wks.jpg" alt="" /></a>
-									<h2 class="major">Our Timeline</h2>
-									<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1Wq0yL-JQnL-AJSMuSaARfdsMI4eGyKrks89cqn2NS9I&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
-								</div>
+									</div>
 							</section>
 
 					</section>
@@ -357,6 +326,7 @@
 								</li>
 								<li class="contactIcon fa-github"><a href="https://github.com/MonashUnitPlanner">github.com/MonashUnitPlanner</a></li>
 								<li class="contactIcon fa-facebook"><a href="https://facebook.com/monplan">facebook.com/monplan</a></li>
+								<li class="contactIcon fa-twitter"><a href="https://twitter.com/monPlan_Monash">twitter.com/monPlan_Monash</a></li>
 								<li class="contactIcon fa-envelope"><a href="mailto:esol-stft-monplan-l@monash.edu">esol-stft-monplan-l@monash.edu</a></li>
 								<li class="contactIcon fa-comments-o">
 									<a href="https://docs.google.com/a/monash.edu/forms/d/e/1FAIpQLSf5Y65r7_9bAZbRysI2JYYcRAKNFgVck9XIIt67TfNwx26FqQ/viewform">
