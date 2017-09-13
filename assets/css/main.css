@@ -1623,7 +1623,6 @@
 	}
 
 	body {
-		background-color: #004973;
 		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/Monash2.jpg");
 		background-size: auto, cover;
 		background-attachment: fixed, fixed;
@@ -3123,8 +3122,7 @@
 
 			#banner {
 				padding: 7em 0 8.25em 0 ;
-				background-color: #004973;
-				background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
+				background-image: url("../../images/bg.jpg");
 				background-size: auto, cover;
 				background-position: center, center;
 				margin-bottom: -6.5em;
