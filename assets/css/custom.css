@@ -9,7 +9,7 @@ body::-webkit-scrollbar-track {
 }
  
 body::-webkit-scrollbar-thumb {
-  background-color: #006cab;
+  background-color: #888;
   outline: 1px solid slategrey;
 }
 
